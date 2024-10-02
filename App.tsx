@@ -39,7 +39,13 @@ export default function App() {
             gerarNumeros(item.quantidadePadrao);
             setLoteria(item);
           }} />          
-            <Numeros numerosGerados={numerosGerados} loteria={loteria} visible={item.id==loteria.id} />   
+            <Numeros numerosGerados={numerosGerados} loteria={loteria} visible={item.id==loteria.id} /> 
+            <View>
+              <Button
+                title="Gerar mais números"
+                onPress={() => gerarNumeros(item.quantidadePadrao)}
+              />
+            </View>  
             <View style={{ marginBottom: 10 }}></View>       
         </>
 
